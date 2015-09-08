@@ -1,0 +1,1 @@
+curl -XPOST localhost:9200/o2ocomment2/_reindex/o2ocomment_dump_20150908_makeyang/?wait_for_completion=true
