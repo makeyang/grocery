@@ -1,0 +1,721 @@
+index:
+An index is a collection of documents that have somewhat similar characteristics
+
+type:
+A type is a logical category/partition of your index whose semantics is completely up to you
+
+documents:
+Within an index/type, you can store as many documents as you want. Note that although a document physically resides in an index, a document actually must be indexed/assigned to a type inside an index.
+
+Shards & replicas:
+Each shard is in itself a fully-functional and independent "index" that can be hosted on any node in the cluster
+The mechanics of how a shard is distributed and also how its documents are aggregated back into search requests are completely managed by Elasticsearch and is transparent to you as the user.
+he number of shards and replicas can be defined per index at the time the index is created.
+After the index is created, you may change the number of replicas dynamically anytime but you cannot change the number shards after-the-fact.
+By default, each index in Elasticsearch is allocated 5 primary shards and 1 replica
+Note:Each Elasticsearch shard is a Lucene index
+
+API:
+curl 'localhost:9200/_cat/health?v'
+curl 'localhost:9200/_cat/nodes?v'
+curl 'localhost:9200/_cat/indices?v'
+http://localhost:9200/twitter/_flush
+curl http://localhost:9200/
+curl http://10.12.115.21:9200/twitter/
+
+curl -XPUT 'http://localhost:9200/customer?pretty'
+curl -XPUT 'http://localhost:9200/customer/external/1' -d {
+"name":"John Doe"
+}
+
+curl -XDELETE 'localhost:9200/customer?pretty'
+curl -XPOST 'localhost:9200/bank/account/_bulk?pretty' --data-binary @accounts.json
+curl 'localhost:9200/bank/_search?q=*&pretty'
+
+
+Filter:
+1. Filters do not score so they are faster to execute than queries
+2. Filters can be cached in memory allowing repeated search executions to be significantly faster than queries 
+
+1. Disable swap
+/etc/fstab
+2. Configure swappiness
+sysctl value vm.swappiness
+3. mlockall
+
+./bin/elasticsearch -d
+
+
+The new default unit is meters
+Now, all dates without years use 1970 as the default.
+Note that as of this writing, updates can only be performed on a single document at a time
+The bulk API executes all the actions sequentially and in order. If a single action fails for whatever reason, it will continue to process the remainder of the actions after it. When the bulk API returns, it will provide a status for each action (in the same order it was sent in) so that you can check if a specific action failed or not.
+its.hits – actual array of search results (defaults to first 10 documents) 
+The from parameter (0-based)
+Introducing the Query Language
+When using the external version type, instead of checking for a matching version number, the system checks to see if the version number passed to the index request is greater than the version of the currently stored document. If true, the document will be indexed and the new version number used. If the value provided is less than or equal to the stored document’s version number, a version conflict will occur and the index operation will fail.
+The index operation only returns after all shards within the replication group have indexed the document (sync replication)
+To prevent writes from taking place on the "wrong" side of a network partition, by default, index operations only succeed if a quorum (>replicas/2+1) of active shards are available. This default can be overridden on a node-by-node basis using the action.write_consistency setting. To alter this behavior per-operation, the consistency request parameter can be used.
+
+Valid write consistency values are one, quorum, and all.
+Note, for the case where the number of replicas is 1 (total of 2 copies of the data), then the default behavior is to succeed if 1 copy (the primary) can perform the write.
+
+The above will get a tweet with id 1, but will be routed based on the user. Note, issuing a get without the correct routing, will cause the document not to be fetched.
+version_type:internal	 external or external_gt 	external_gte	force
+ distance_type
+    How to compute the distance. Can either be sloppy_arc (default), arc (slightly more precise but significantly slower) or plane (faster, but inaccurate on long distances and close to the poles). 
+Important
+
+The initial search request and each subsequent scroll request returns a new _scroll_id — only the most recent _scroll_id should be used.
+Setting search_type to scan disables sorting and makes scrolling very efficient. 
+If you want the scoring to happen, even without sorting on it, set the track_scores parameter to true.
+
+1. index api:
+curl -XPUT 'http://localhost:9200/twitter/tweet/1?op_type=create?version=2&consistency=all&version_type=force' -d '{
+    "user" : "kimchy",
+    "post_date" : "2009-11-15T14:12:12",
+    "message" : "trying out Elasticsearch"
+}'
+curl -XPUT 'http://localhost:9200/twitter/tweet/1?op_type=create' -d '{
+    "user" : "kimchy",
+    "post_date" : "2009-11-15T14:12:12",
+    "message" : "trying out Elasticsearch"
+}'
+curl -XPUT 'http://localhost:9200/twitter/tweet/1/_create' -d '{
+    "user" : "kimchy",
+    "post_date" : "2009-11-15T14:12:12",
+    "message" : "trying out Elasticsearch"
+}'
+curl -XPUT 'http://localhost:9200/twitter/tweet/1' -d '{
+"user":"kimchy",
+"post_date":"2009-11-15T14:12:12",
+"message":"trying out Elasticsearch"
+}'
+curl -XPUT 'localhost:9200/twitter/tweet/1?version=2' -d '{
+    "message" : "elasticsearch now has versioning support, double cool!"
+}'
+curl -XPUT 'http://localhost:9200/twitter/tweet/1?op_type=create' -d '{
+    "user" : "kimchy",
+    "post_date" : "2009-11-15T14:12:12",
+    "message" : "trying out Elasticsearch"
+}'
+
+curl -XPOST 'http://localhost:9200/twitter/tweet?routing=kimchy' -d '{
+    "user" : "kimchy",
+    "post_date" : "2009-11-15T14:12:12",
+    "message" : "trying out Elasticsearch"
+}'
+
+curl -XPUT localhost:9200/blogs/blog_tag/1122?parent=1111 -d '{
+    "tag" : "something"
+}'
+
+curl -XPUT localhost:9200/twitter/tweet/1?timestamp=2009-11-15T14%3A12%3A12 -d '{
+    "user" : "kimchy",
+    "message" : "trying out Elasticsearch"
+}'
+
+curl -XPUT 'http://localhost:9200/twitter/tweet/1?ttl=86400000' -d '{
+    "user": "kimchy",
+    "message": "Trying out elasticsearch, so far so good?"
+}'
+curl -XPUT 'http://localhost:9200/twitter/tweet/1?ttl=1d' -d '{
+    "user": "kimchy",
+    "message": "Trying out elasticsearch, so far so good?"
+}'
+curl -XPUT 'http://localhost:9200/twitter/tweet/1?timeout=5m' -d '{
+    "user" : "kimchy",
+    "post_date" : "2009-11-15T14:12:12",
+    "message" : "trying out Elasticsearch"
+}'
+
+get API:
+curl -XGET 'http://localhost:9200/twitter/tweet/1'
+curl -XGET 'http://localhost:9200/twitter/tweet/1?_source=false'
+curl -XGET 'http://localhost:9200/twitter/tweet/1?_source_include=*.id&_source_exclude=entities'
+curl -XGET 'http://localhost:9200/twitter/tweet/1?fields=title,content'
+curl -XGET 'http://localhost:9200/twitter/tweet/1/_source'
+curl -XGET 'http://localhost:9200/twitter/tweet/1/_source?_source_include=*.id&_source_exclude=entities'
+curl -XGET 'http://localhost:9200/twitter/tweet/1?routing=kimchy'
+
+delete API:
+curl -XDELETE 'http://localhost:9200/twitter/tweet/1'
+curl -XDELETE 'http://localhost:9200/twitter/tweet/1?timeout=5m'
+
+update API:
+curl -XPOST 'localhost:9200/test/type1/1/_update' -d '{
+    "script" : "ctx._source.counter += count",
+    "params" : {
+        "count" : 4
+    }
+}'
+
+curl -XPOST 'localhost:9200/test/type1/1/_update' -d '{
+    "doc" : {
+        "name" : "new_name"
+    }
+}'
+curl -XPOST 'localhost:9200/test/type1/1/_update' -d '{
+    "doc" : {
+        "name" : "new_name"
+    },
+    "detect_noop": true
+}'
+curl -XPOST 'localhost:9200/test/type1/1/_update' -d '{
+    "doc" : {
+        "name" : "new_name"
+    },
+    "doc_as_upsert" : true
+}'
+curl -XPOST 'http://localhost:9200/test/type1/1/_update?consistency
+
+Multi GET API:
+curl 'localhost:9200/_mget' -d '{
+    "docs" : [
+        {
+            "_index" : "test",
+            "_type" : "type",
+            "_id" : "1"
+        },
+        {
+            "_index" : "test",
+            "_type" : "type",
+            "_id" : "2"
+        }
+    ]
+}'
+
+curl 'localhost:9200/_mget' -d '{
+    "docs" : [
+        {
+            "_index" : "test",
+            "_type" : "type",
+            "_id" : "1",
+            "_source" : false
+        },
+        {
+            "_index" : "test",
+            "_type" : "type",
+            "_id" : "2",
+            "_source" : ["field3", "field4"]
+        },
+        {
+            "_index" : "test",
+            "_type" : "type",
+            "_id" : "3",
+            "_source" : {
+                "include": ["user"],
+                "exclude": ["user.location"]
+            }
+        }
+    ]
+}'
+bulk API:
+delete by query API:
+curl -XDELETE 'http://localhost:9200/twitter/_query?q=user:kimchy'
+curl -XDELETE 'http://localhost:9200/twitter/tweet,user/_query?q=user:kimchy'
+curl -XDELETE 'http://localhost:9200/kimchy,elasticsearch/_query?q=tag:wow'
+curl -XDELETE 'http://localhost:9200/_all/_query?q=tag:wow'
+A Bulk UDP:
+search API:
+curl -XGET 'http://localhost:9200/twitter/_search?q=user:kimchy'
+curl -XGET 'http://localhost:9200/twitter/tweet,user/_search?q=user:kimchy'
+curl -XGET 'http://localhost:9200/kimchy,elasticsearch/tweet/_search?q=tag:wow'
+curl -XGET 'http://localhost:9200/_all/tweet/_search?q=tag:wow'
+curl -XGET 'http://localhost:9200/_search?q=tag:wow'
+query:
+{
+    "query" : {
+        "term" : { "user" : "kimchy" }
+    }
+}
+{
+    "from" : 0, "size" : 10,
+    "query" : {
+        "term" : { "user" : "kimchy" }
+    }
+}
+{
+    "sort" : [
+        {
+            "_geo_distance" : {
+                "pin.location" : [-70, 40],
+                "order" : "asc",
+                "unit" : "km",
+                "mode" : "min",
+                "distance_type" : "sloppy_arc"
+            }
+        }
+    ],
+    "query" : {
+        "term" : { "user" : "kimchy" }
+    }
+}
+
+{
+    "sort" : [
+        {
+            "_geo_distance" : {
+                "pin.location" : [-70, 40],
+                "order" : "asc",
+                "unit" : "km"
+            }
+        }
+    ],
+    "query" : {
+        "term" : { "user" : "kimchy" }
+    }
+}
+"pin.location" : [[-70, 40], [-71, 42]]
+"pin.location" : [{"lat": -70, "lon": 40}, {"lat": -71, "lon": 42}]
+
+{
+    "track_scores": true,
+    "sort" : [
+        { "post_date" : {"reverse" : true} },
+        { "name" : "desc" },
+        { "age" : "desc" }
+    ],
+    "query" : {
+        "term" : { "user" : "kimchy" }
+    }
+}
+
+{
+    "_source": {
+        "include": [ "obj1.*", "obj2.*" ],
+        "exclude": [ "*.description" ],
+    }
+    "query" : {
+        "term" : { "user" : "kimchy" }
+    }
+}
+
+{
+    "fields" : ["user", "postDate"],
+    "query" : {
+        "term" : { "user" : "kimchy" }
+    }
+}
+
+{
+    "query" : {
+        "match_all" : {}
+    },
+    "partial_fields" : {
+        "partial1" : {
+            "include" : "obj1.obj2.*",
+            "exclude" : "obj1.obj3.*"
+        }
+    }
+}
+
+search type:
+Parameter value: query_then_fetch
+Parameter value: dfs_query_then_fetch
+Parameter value: count
+Parameter value: scan
+Parameter value: query_and_fetch
+Parameter value: dfs_query_and_fetch
+
+scrolling:
+curl -XGET 'localhost:9200/twitter/tweet/_search?scroll=1m' -d '
+{
+    "query": {
+        "match" : {
+            "title" : "elasticsearch"
+        }
+    }
+}
+
+curl -XGET  'localhost:9200/_search/scroll?scroll=1m'   \
+     -d       'c2Nhbjs2OzM0NDg1ODpzRlBLc0FXNlNyNm5JWUc1' 
+	 
+curl 'localhost:9200/twitter/tweet/_search?scroll=1m&search_type=scan'  -d '
+{
+    "query": {
+        "match" : {
+            "title" : "elasticsearch"
+        }
+    }
+}
+'
+
+curl -XDELETE localhost:9200/_search/scroll \
+     -d 'c2Nhbjs2OzM0NDg1ODpzRlBLc0FXNlNyNm5JWUc1'
+	 
+curl -XDELETE localhost:9200/_search/scroll \
+     -d 'c2Nhbjs2OzM0NDg1ODpzRlBLc0FXNlNyNm5JWUc1,aGVuRmV0Y2g7NTsxOnkxaDZ'
+	 
+curl -XDELETE localhost:9200/_search/scroll/_all
+
+curl localhost:9200/_search?preference=xyzabc123 -d '
+{
+    "query": {
+        "match": {
+            "title": "elasticsearch"
+        }
+    }
+}
+'
+
+{
+    "explain": true,
+    "query" : {
+        "term" : { "user" : "kimchy" }
+    }
+}
+
+{
+    "version": true,
+    "query" : {
+        "term" : { "user" : "kimchy" }
+    }
+}
+{
+    "indices_boost" : {
+        "index1" : 1.4,
+        "index2" : 1.3
+    }
+}
+
+{
+    "min_score": 0.5,
+    "query" : {
+        "term" : { "user" : "kimchy" }
+    }
+}
+
+search shards api:
+curl -XGET 'localhost:9200/twitter/_search_shards'
+curl -XGET 'localhost:9200/twitter/_search_shards?routing=foo,baz'
+
+
+
+Shards allocation
+	initial recovery, replica allocation, rebalancing, or handling nodes being added or removed.
+
+	The indices module:
+		indexing buffer:
+		indices.memory.index_buffer_size
+		indices.memory.min_index_buffer_size
+		indices.memory.max_index_buffer_size
+		indices.memory.min_shard_index_buffer_size
+
+	TTL interval:
+		indices.ttl.interval
+
+	recovery:
+		indices.recovery.concurrent_streams
+		indices.recovery.concurrent_small_file_streams
+		indices.recovery.file_chunk_size
+		indices.recovery.translog_ops
+		indices.recovery.translog_size
+		indices.recovery.compress
+		indices.recovery.max_bytes_per_sec
+
+	store throttling:
+		indices.store.throttle.type
+		indices.store.throttle.max_bytes_per_sec
+
+index settings:
+index.compound_format
+index.compound_on_flush
+index.refresh_interval
+index.shard.check_on_startup
+
+shard allocation filtering:
+index.routing.allocation.include.tag
+index.routing.allocation.exclude.tag
+
+index.routing.allocation.total_shards_per_node
+cluster.routing.allocation.disk.threshold_enabled
+cluster.routing.allocation.disk.watermark.low
+cluster.routing.allocation.disk.watermark.high
+cluster.info.update.interval
+cluster.routing.allocation.disk.include_relocations
+
+
+A shard in elasticsearch is a Lucene index, and a Lucene index is broken down into segments.
+
+
+
+number_of_shards
+number_of_replicas
+
+curl -XPUT 'http://localhost:9200/twitter/' -d '{
+    "settings" : {
+        "index" : {
+            "number_of_shards" : 1,
+            "number_of_replicas" : 0,
+			"index.compound_format" : 0
+        }
+    }
+}'
+
+curl -XPUT 'http://localhost:9200/twitter/tweet/1' -d '{
+    "user" : "kimchy",
+    "post_date" : "2009-11-15T14:12:12",
+    "message" : "trying out Elasticsearch"
+}'
+
+
+"_type" : {"store" : true}
+"_type" : {"index" : "no"}
+"_id" : {"index" : "not_analyzed", "store" : true}
+"_id" : {"path" : "post_id"}
+"_source": {"enabled": false}
+"first" : {"type" : "string", "store" : true , "include_in_all" : false}
+"last" : {"type" : "string", "index" : "not_analyzed"}
+
+"tweet" : {
+        "properties" : {
+            "user" : {"type" : "string", "index" : "not_analyzed"},
+            "message" : {"type" : "string", "null_value" : "na"},
+            "postDate" : {"type" : "date"},
+            "priority" : {"type" : "integer"},
+            "rank" : {"type" : "float"}
+        }
+    }
+"message" : {
+                "type" : "string",
+                "store" : true,
+                "index" : "analyzed",
+                "null_value" : "na"
+            },
+			
+			
+"_type" : {"index" : "no"}
+"_source": {"enabled": false}
+"_source": {
+        "includes": [
+          "*.count",
+          "meta.*"
+        ],
+        "excludes": [
+          "meta.description",
+          "meta.other.*"
+        ]
+      }
+"_all" : {"enabled" : true},
+"_routing" : {
+            "required" : true,
+            "path" : "blog.post_id"
+        }
+"_index" : { "enabled" : true }
+"_size" : {"enabled" : true}
+"_ttl" : { "enabled" : true, "default" : "1d" }
+
+
+
+match query: boolean defalut: or  (zero_terms_query)
+"match" : {
+        "message" : "this is a test"
+}
+"match_phrase" : {
+        "message" : "this is a test"
+    }
+"match" : {
+        "message" : {
+            "query" : "this is a test",
+            "type" : "phrase"
+        }
+    }
+"match_phrase_prefix" : {
+        "message" : "this is a test"
+    }
+"match" : {
+        "message" : {
+            "query" : "this is a test",
+            "type" : "phrase_prefix"
+        }
+    }
+
+"multi_match" : {
+    "query":    "this is a test", 
+    "fields": [ "subject", "message" ] 
+  }	
+  
+These extra nested documents are hidden; we can’t access them directly. To update, add, or remove a nested object, we have to reindex the whole document. It’s important to note that, the result returned by a search request is not the nested object alone; it is the whole document.
+A nested field can contain other nested fields. Similarly, a nested query can contain other nested queries. The nesting hierarchy is applied as you would expect.
+
+     The parent document can be updated without reindexing the children.
+    Child documents can be added, changed, or deleted without affecting either the parent or other children. This is especially useful when child documents are large in number and need to be added or changed frequently.
+    Child documents can be returned as the results of a search request. 
+	
+	 limitation on the parent-child relationship: the parent document and all of its children must live on the same shard.
+	 
+	 "mappings": {
+    "branch": {},
+    "employee": {
+      "_parent": {
+        "type": "branch" 
+      }
+    }
+  }
+  
+http://192.168.200.189:9270/vip_coupon/vip_coupon_user/_search?pretty
+{
+	"fields" : [],
+	"from" : 0, "size" : 20,
+    "query" : {
+        "match_all" : {  }
+    }
+}
+
+http://192.168.200.189:9270/vip_coupon/vip_coupon_user/_query?pretty
+{
+    "query" : {
+        "match_all" : {  }
+    }
+}
+
+
+{
+   "settings" : {
+      "number_of_shards" : 1,
+      "number_of_replicas" : 1
+   }
+}
+
+
+{
+  "template" : "*",
+  "mappings" : {
+    "_default_" : {
+       "dynamic_templates" : [ 
+		   {
+			 "string_fields" : {
+			   "match" : "*",
+			   "match_mapping_type" : "string",
+			   "mapping" : {
+				 "type" : "string", "index" : "no", "store" : true , "omit_norms" : true
+			   }
+			 }
+		   } 
+	   ]
+    }
+  }
+}
+
+http://192.168.212.1:9200/_template/template_1?pretty
+
+https://github.com/codelibs/elasticsearch-reindexing
+curl -XPOST localhost:9200/sample/_reindex/newsample/?wait_for_completion=true
+curl -XPOST localhost:9200/sample/_reindex/newsample/?url=http%3A%2F%2Flocalhost%3A9200%2F
+curl -XPOST localhost:9200/sample/_reindex/newsample -d '{"query":{"match_all":{}}}'
+curl -XGET localhost:9200/_reindex
+
+
+curl -XPUT 'http://192.168.200.189:9270/testttladd/' -d '
+{
+    "settings" : {
+        "index" : {
+            "number_of_shards" : 1,
+            "number_of_replicas" : 0
+        }
+    }
+}
+'
+
+curl -XPUT 'http://192.168.200.189:9270/testttladd/_mapping/nottl' -d '
+{
+	"nottl": {
+		"_all": {
+			"enabled": false
+		},
+		"properties": {
+			"message": {
+			    "store":"true",
+				"type": "string"
+			}		
+		}
+	}
+}
+
+
+http://192.168.200.189:9270/testttladd/nottl/1
+{
+  "message": "hello world"
+}
+
+http://192.168.200.189:9270/website/_flush
+http://192.168.200.189:9270/website/_flush/sync
+http://192.168.200.189:9270/_optimize
+
+
+curl -XPUT 'http://192.168.200.189:9280/_cluster/settings' -d '{
+    "transient" : {
+        "cluster.routing.allocation.disk.threshold_enabled" : true,
+		"cluster.routing.allocation.disk.watermark.low" : "90%",
+		"cluster.routing.allocation.disk.watermark.high" : "95%"
+    }
+}'
+
+
+curl -XPUT localhost:9200/_cluster/settings -d '{
+	    "persistent" : {
+	        "discovery.zen.minimum_master_nodes" : 3
+	    }
+	}'
+	
+	
+# Prevent rebalancing whilst our node is unavailable.
+$ curl -XPUT 'http://some-node:9200/_cluster/settings' -d '{
+    "transient" : {
+        "cluster.routing.allocation.enable" : "none"
+    }
+}'
+
+# Shutdown this node.
+$ curl -XPOST 'http://some-node:9200/_cluster/nodes/_local/_shutdown'
+
+# Now start the node again, and verify that it's joined the cluster.
+
+# Enable rebalancing again.
+$ curl -XPUT 'http://some-node:9200/_cluster/settings' -d '{
+    "transient" : {
+        "cluster.routing.allocation.enable" : "all"
+    }
+}'
+
+XPOST http://192.168.200.189:9270/_cluster/reroute
+{
+    "commands" : [ 
+	{
+        "move" :
+            {
+              "index" : ".marvel-2015.08.28", "shard" : 0,
+              "from_node" : "linux-200-193", "to_node" : "linux-200-194"
+            }
+    },
+    {
+          "allocate" : {
+              "index" : "test", "shard" : 1, "node" : "node3"
+          }
+    },
+	{
+          "cancel" : {
+              "index" : "twitter", 
+			  "shard" : 0, 
+			  "node" : "linux-200-197",
+			  "allow_primary": true
+          }
+    }
+	]
+}
+
+curl -XPUT localhost:9200/test/_settings -d '{
+    "index.routing.allocation.include.group1" : "xxx",
+    "index.routing.allocation.include.group2" : "yyy",
+    "index.routing.allocation.exclude.group3" : "zzz",
+    "index.routing.allocation.require.group4" : "aaa"
+}'
+
+curl -XPUT localhost:9200/_cluster/settings -d '{
+    "transient" : {
+        "cluster.routing.allocation.exclude._ip" : "10.0.0.1"
+    }
+}'
+
+curl -XPOST 'http://localhost:9200/_shutdown
