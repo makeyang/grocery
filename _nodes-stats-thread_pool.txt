@@ -1,0 +1,2477 @@
+{
+   "cluster_name": "logbook",
+   "nodes": {
+      "VUKy-UP_RHWKY7ttDN3ajA": {
+         "timestamp": 1448878848354,
+         "attributes": {
+            "max_local_storage_nodes": "20",
+            "data": "false",
+            "master": "true"
+         },
+         "thread_pool": {
+            "percolate": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "fetch_shard_started": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "listener": {
+               "threads": 10,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 10,
+               "completed": 459
+            },
+            "index": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "refresh": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "suggest": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "generic": {
+               "threads": 1,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 6,
+               "completed": 121749
+            },
+            "warmer": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "search": {
+               "threads": 64,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 64,
+               "completed": 4366
+            },
+            "flush": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "optimize": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "fetch_shard_store": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "management": {
+               "threads": 2,
+               "queue": 0,
+               "active": 1,
+               "rejected": 0,
+               "largest": 2,
+               "completed": 114374
+            },
+            "get": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "merge": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "bulk": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "snapshot": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            }
+         }
+      },
+      "AFkBRgdOSIK4CWUvS_SnYg": {
+         "timestamp": 1448878848350,
+         "attributes": {
+            "max_local_storage_nodes": "20",
+            "master": "false"
+         },
+         "thread_pool": {
+            "percolate": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "fetch_shard_started": {
+               "threads": 1,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 12,
+               "completed": 144
+            },
+            "listener": {
+               "threads": 10,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 10,
+               "completed": 16
+            },
+            "index": {
+               "threads": 4,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 4,
+               "completed": 4
+            },
+            "refresh": {
+               "threads": 2,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 4,
+               "completed": 22663
+            },
+            "suggest": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "generic": {
+               "threads": 1,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 12,
+               "completed": 228162
+            },
+            "warmer": {
+               "threads": 1,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 3,
+               "completed": 46657
+            },
+            "search": {
+               "threads": 64,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 64,
+               "completed": 18456
+            },
+            "flush": {
+               "threads": 32,
+               "queue": 0,
+               "active": 1,
+               "rejected": 0,
+               "largest": 32,
+               "completed": 468029
+            },
+            "optimize": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "fetch_shard_store": {
+               "threads": 1,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 22,
+               "completed": 851
+            },
+            "management": {
+               "threads": 5,
+               "queue": 0,
+               "active": 1,
+               "rejected": 0,
+               "largest": 5,
+               "completed": 6269182
+            },
+            "get": {
+               "threads": 3,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 3,
+               "completed": 3
+            },
+            "merge": {
+               "threads": 2,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 3,
+               "completed": 11774
+            },
+            "bulk": {
+               "threads": 8,
+               "queue": 0,
+               "active": 1,
+               "rejected": 419,
+               "largest": 8,
+               "completed": 7546048
+            },
+            "snapshot": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            }
+         }
+      },
+      "ppxb2GiCQp-PRkJEtBSPeA": {
+         "timestamp": 1448878848349,
+         "attributes": {
+            "max_local_storage_nodes": "20",
+            "master": "false"
+         },
+         "thread_pool": {
+            "percolate": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "fetch_shard_started": {
+               "threads": 1,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 23,
+               "completed": 163
+            },
+            "listener": {
+               "threads": 10,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 10,
+               "completed": 28
+            },
+            "index": {
+               "threads": 1,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 1,
+               "completed": 1
+            },
+            "refresh": {
+               "threads": 1,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 4,
+               "completed": 22097
+            },
+            "suggest": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "generic": {
+               "threads": 1,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 80,
+               "completed": 252355
+            },
+            "warmer": {
+               "threads": 1,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 2,
+               "completed": 46243
+            },
+            "search": {
+               "threads": 64,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 64,
+               "completed": 204880
+            },
+            "flush": {
+               "threads": 32,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 32,
+               "completed": 468763
+            },
+            "optimize": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "fetch_shard_store": {
+               "threads": 1,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 13,
+               "completed": 862
+            },
+            "management": {
+               "threads": 5,
+               "queue": 0,
+               "active": 1,
+               "rejected": 0,
+               "largest": 5,
+               "completed": 6281052
+            },
+            "get": {
+               "threads": 15,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 15,
+               "completed": 15
+            },
+            "merge": {
+               "threads": 2,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 3,
+               "completed": 11856
+            },
+            "bulk": {
+               "threads": 8,
+               "queue": 0,
+               "active": 0,
+               "rejected": 467,
+               "largest": 8,
+               "completed": 7522452
+            },
+            "snapshot": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            }
+         }
+      },
+      "OTYlKpYgR7qRxTC5-fNg9w": {
+         "timestamp": 1448878848346,
+         "attributes": {
+            "max_local_storage_nodes": "20",
+            "data": "false",
+            "master": "false"
+         },
+         "thread_pool": {
+            "percolate": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "fetch_shard_started": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "listener": {
+               "threads": 8,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 8,
+               "completed": 8
+            },
+            "index": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "refresh": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "suggest": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "generic": {
+               "threads": 1,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 109,
+               "completed": 194114
+            },
+            "warmer": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "search": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "flush": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "optimize": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "fetch_shard_store": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "management": {
+               "threads": 2,
+               "queue": 0,
+               "active": 1,
+               "rejected": 0,
+               "largest": 5,
+               "completed": 348252
+            },
+            "get": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "merge": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "bulk": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "snapshot": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            }
+         }
+      },
+      "GQEQ3sRwRT-dRAiiA-7nyw": {
+         "timestamp": 1448878848345,
+         "attributes": {
+            "max_local_storage_nodes": "20",
+            "master": "false"
+         },
+         "thread_pool": {
+            "percolate": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "fetch_shard_started": {
+               "threads": 1,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 27,
+               "completed": 196
+            },
+            "listener": {
+               "threads": 10,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 10,
+               "completed": 378
+            },
+            "index": {
+               "threads": 20,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 20,
+               "completed": 20
+            },
+            "refresh": {
+               "threads": 2,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 4,
+               "completed": 21592
+            },
+            "suggest": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "generic": {
+               "threads": 1,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 11,
+               "completed": 189535
+            },
+            "warmer": {
+               "threads": 1,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 3,
+               "completed": 45627
+            },
+            "search": {
+               "threads": 64,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 64,
+               "completed": 677
+            },
+            "flush": {
+               "threads": 32,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 32,
+               "completed": 460587
+            },
+            "optimize": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "fetch_shard_store": {
+               "threads": 1,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 11,
+               "completed": 862
+            },
+            "management": {
+               "threads": 5,
+               "queue": 0,
+               "active": 1,
+               "rejected": 0,
+               "largest": 5,
+               "completed": 6310117
+            },
+            "get": {
+               "threads": 12,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 12,
+               "completed": 12
+            },
+            "merge": {
+               "threads": 1,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 3,
+               "completed": 11799
+            },
+            "bulk": {
+               "threads": 8,
+               "queue": 0,
+               "active": 0,
+               "rejected": 53679,
+               "largest": 8,
+               "completed": 7468080
+            },
+            "snapshot": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            }
+         }
+      },
+      "_iy1nhRCRhO6khL2aHqxbg": {
+         "timestamp": 1448878848382,
+         "attributes": {
+            "max_local_storage_nodes": "20",
+            "master": "false"
+         },
+         "thread_pool": {
+            "percolate": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "fetch_shard_started": {
+               "threads": 1,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 17,
+               "completed": 161
+            },
+            "listener": {
+               "threads": 10,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 10,
+               "completed": 27
+            },
+            "index": {
+               "threads": 3,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 3,
+               "completed": 3
+            },
+            "refresh": {
+               "threads": 1,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 7,
+               "completed": 27880
+            },
+            "suggest": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "generic": {
+               "threads": 1,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 25,
+               "completed": 252846
+            },
+            "warmer": {
+               "threads": 1,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 3,
+               "completed": 54243
+            },
+            "search": {
+               "threads": 64,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 64,
+               "completed": 132170
+            },
+            "flush": {
+               "threads": 32,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 32,
+               "completed": 472721
+            },
+            "optimize": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "fetch_shard_store": {
+               "threads": 1,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 64,
+               "completed": 812
+            },
+            "management": {
+               "threads": 5,
+               "queue": 0,
+               "active": 1,
+               "rejected": 0,
+               "largest": 5,
+               "completed": 6129576
+            },
+            "get": {
+               "threads": 19,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 19,
+               "completed": 19
+            },
+            "merge": {
+               "threads": 1,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 3,
+               "completed": 14543
+            },
+            "bulk": {
+               "threads": 8,
+               "queue": 0,
+               "active": 1,
+               "rejected": 2959,
+               "largest": 8,
+               "completed": 7433902
+            },
+            "snapshot": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            }
+         }
+      },
+      "ZX8p7dVKS5yNIcigjZZgbQ": {
+         "timestamp": 1448878848348,
+         "attributes": {
+            "max_local_storage_nodes": "20",
+            "data": "false",
+            "master": "false"
+         },
+         "thread_pool": {
+            "percolate": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "fetch_shard_started": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "listener": {
+               "threads": 10,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 10,
+               "completed": 26
+            },
+            "index": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "refresh": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "suggest": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "generic": {
+               "threads": 1,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 209,
+               "completed": 195602
+            },
+            "warmer": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "search": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "flush": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "optimize": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "fetch_shard_store": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "management": {
+               "threads": 2,
+               "queue": 0,
+               "active": 1,
+               "rejected": 0,
+               "largest": 5,
+               "completed": 348254
+            },
+            "get": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "merge": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "bulk": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "snapshot": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            }
+         }
+      },
+      "4w8Waj3LQay722nzx7yj9w": {
+         "timestamp": 1448878848346,
+         "attributes": {
+            "max_local_storage_nodes": "20",
+            "data": "false",
+            "master": "true"
+         },
+         "thread_pool": {
+            "percolate": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "fetch_shard_started": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "listener": {
+               "threads": 10,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 10,
+               "completed": 1108
+            },
+            "index": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "refresh": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "suggest": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "generic": {
+               "threads": 1,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 560,
+               "completed": 64215
+            },
+            "warmer": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "search": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "flush": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "optimize": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "fetch_shard_store": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "management": {
+               "threads": 3,
+               "queue": 0,
+               "active": 1,
+               "rejected": 0,
+               "largest": 3,
+               "completed": 154695
+            },
+            "get": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "merge": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "bulk": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "snapshot": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            }
+         }
+      },
+      "0s7lxpqPS2-7TvoTyNKsMQ": {
+         "timestamp": 1448878848349,
+         "attributes": {
+            "max_local_storage_nodes": "20",
+            "master": "false"
+         },
+         "thread_pool": {
+            "percolate": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "fetch_shard_started": {
+               "threads": 1,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 16,
+               "completed": 144
+            },
+            "listener": {
+               "threads": 3,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 3,
+               "completed": 3
+            },
+            "index": {
+               "threads": 2,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 2,
+               "completed": 2
+            },
+            "refresh": {
+               "threads": 1,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 4,
+               "completed": 21353
+            },
+            "suggest": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "generic": {
+               "threads": 1,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 751,
+               "completed": 295229
+            },
+            "warmer": {
+               "threads": 1,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 3,
+               "completed": 44575
+            },
+            "search": {
+               "threads": 64,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 64,
+               "completed": 475
+            },
+            "flush": {
+               "threads": 32,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 32,
+               "completed": 425071
+            },
+            "optimize": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "fetch_shard_store": {
+               "threads": 1,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 61,
+               "completed": 851
+            },
+            "management": {
+               "threads": 5,
+               "queue": 0,
+               "active": 1,
+               "rejected": 0,
+               "largest": 5,
+               "completed": 6269431
+            },
+            "get": {
+               "threads": 32,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 32,
+               "completed": 49
+            },
+            "merge": {
+               "threads": 1,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 3,
+               "completed": 11389
+            },
+            "bulk": {
+               "threads": 8,
+               "queue": 0,
+               "active": 0,
+               "rejected": 112074,
+               "largest": 8,
+               "completed": 7205714
+            },
+            "snapshot": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            }
+         }
+      },
+      "K_7wYjDvTpe_whPmWSgu1g": {
+         "timestamp": 1448878848348,
+         "attributes": {
+            "max_local_storage_nodes": "20",
+            "master": "false"
+         },
+         "thread_pool": {
+            "percolate": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "fetch_shard_started": {
+               "threads": 1,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 18,
+               "completed": 183
+            },
+            "listener": {
+               "threads": 10,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 10,
+               "completed": 85
+            },
+            "index": {
+               "threads": 3,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 3,
+               "completed": 3
+            },
+            "refresh": {
+               "threads": 1,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 5,
+               "completed": 21366
+            },
+            "suggest": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "generic": {
+               "threads": 1,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 50,
+               "completed": 183777
+            },
+            "warmer": {
+               "threads": 1,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 2,
+               "completed": 45214
+            },
+            "search": {
+               "threads": 64,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 64,
+               "completed": 680
+            },
+            "flush": {
+               "threads": 32,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 32,
+               "completed": 444625
+            },
+            "optimize": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "fetch_shard_store": {
+               "threads": 1,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 11,
+               "completed": 862
+            },
+            "management": {
+               "threads": 5,
+               "queue": 0,
+               "active": 1,
+               "rejected": 0,
+               "largest": 5,
+               "completed": 6259964
+            },
+            "get": {
+               "threads": 32,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 32,
+               "completed": 59
+            },
+            "merge": {
+               "threads": 2,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 5,
+               "completed": 11638
+            },
+            "bulk": {
+               "threads": 8,
+               "queue": 0,
+               "active": 0,
+               "rejected": 54314,
+               "largest": 8,
+               "completed": 7339241
+            },
+            "snapshot": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            }
+         }
+      },
+      "VtIf1ldyTSGK14IhPasC2g": {
+         "timestamp": 1448878848345,
+         "attributes": {
+            "max_local_storage_nodes": "20",
+            "master": "false"
+         },
+         "thread_pool": {
+            "percolate": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "fetch_shard_started": {
+               "threads": 1,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 22,
+               "completed": 171
+            },
+            "listener": {
+               "threads": 10,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 10,
+               "completed": 43
+            },
+            "index": {
+               "threads": 5,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 5,
+               "completed": 5
+            },
+            "refresh": {
+               "threads": 1,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 5,
+               "completed": 22511
+            },
+            "suggest": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "generic": {
+               "threads": 1,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 65,
+               "completed": 293149
+            },
+            "warmer": {
+               "threads": 1,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 2,
+               "completed": 47576
+            },
+            "search": {
+               "threads": 64,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 64,
+               "completed": 205471
+            },
+            "flush": {
+               "threads": 32,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 32,
+               "completed": 476846
+            },
+            "optimize": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "fetch_shard_store": {
+               "threads": 1,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 13,
+               "completed": 862
+            },
+            "management": {
+               "threads": 5,
+               "queue": 0,
+               "active": 1,
+               "rejected": 0,
+               "largest": 5,
+               "completed": 6326380
+            },
+            "get": {
+               "threads": 32,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 32,
+               "completed": 45
+            },
+            "merge": {
+               "threads": 1,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 5,
+               "completed": 12053
+            },
+            "bulk": {
+               "threads": 8,
+               "queue": 0,
+               "active": 0,
+               "rejected": 62245,
+               "largest": 8,
+               "completed": 7581641
+            },
+            "snapshot": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            }
+         }
+      },
+      "uZpswvo1QfKEK_kpIHslXA": {
+         "timestamp": 1448878848346,
+         "attributes": {
+            "max_local_storage_nodes": "20",
+            "master": "false"
+         },
+         "thread_pool": {
+            "percolate": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "fetch_shard_started": {
+               "threads": 1,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 12,
+               "completed": 144
+            },
+            "listener": {
+               "threads": 10,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 10,
+               "completed": 459
+            },
+            "index": {
+               "threads": 47,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 47,
+               "completed": 47
+            },
+            "refresh": {
+               "threads": 1,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 5,
+               "completed": 22173
+            },
+            "suggest": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "generic": {
+               "threads": 1,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 199,
+               "completed": 198158
+            },
+            "warmer": {
+               "threads": 1,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 2,
+               "completed": 46304
+            },
+            "search": {
+               "threads": 64,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 64,
+               "completed": 1477
+            },
+            "flush": {
+               "threads": 32,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 32,
+               "completed": 461431
+            },
+            "optimize": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "fetch_shard_store": {
+               "threads": 1,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 22,
+               "completed": 851
+            },
+            "management": {
+               "threads": 5,
+               "queue": 0,
+               "active": 1,
+               "rejected": 0,
+               "largest": 5,
+               "completed": 6331597
+            },
+            "get": {
+               "threads": 32,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 32,
+               "completed": 36
+            },
+            "merge": {
+               "threads": 1,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 5,
+               "completed": 11897
+            },
+            "bulk": {
+               "threads": 8,
+               "queue": 0,
+               "active": 0,
+               "rejected": 54444,
+               "largest": 8,
+               "completed": 7503439
+            },
+            "snapshot": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            }
+         }
+      },
+      "Q1cY0Q3kRnWC1T3mTV3fcw": {
+         "timestamp": 1448878848348,
+         "attributes": {
+            "max_local_storage_nodes": "20",
+            "data": "false",
+            "master": "true"
+         },
+         "thread_pool": {
+            "percolate": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "fetch_shard_started": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "listener": {
+               "threads": 2,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 2,
+               "completed": 2
+            },
+            "index": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "refresh": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "suggest": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "generic": {
+               "threads": 1,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 5,
+               "completed": 121646
+            },
+            "warmer": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "search": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "flush": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "optimize": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "fetch_shard_store": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "management": {
+               "threads": 2,
+               "queue": 0,
+               "active": 1,
+               "rejected": 0,
+               "largest": 2,
+               "completed": 114147
+            },
+            "get": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "merge": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "bulk": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "snapshot": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            }
+         }
+      },
+      "IGqzqKhjT5C4WeW0Rp0v4Q": {
+         "timestamp": 1448878848348,
+         "attributes": {
+            "max_local_storage_nodes": "20",
+            "master": "false"
+         },
+         "thread_pool": {
+            "percolate": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "fetch_shard_started": {
+               "threads": 1,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 14,
+               "completed": 144
+            },
+            "listener": {
+               "threads": 10,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 10,
+               "completed": 21
+            },
+            "index": {
+               "threads": 1,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 1,
+               "completed": 1
+            },
+            "refresh": {
+               "threads": 1,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 7,
+               "completed": 22000
+            },
+            "suggest": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "generic": {
+               "threads": 1,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 85,
+               "completed": 192024
+            },
+            "warmer": {
+               "threads": 1,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 2,
+               "completed": 45954
+            },
+            "search": {
+               "threads": 64,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 64,
+               "completed": 133777
+            },
+            "flush": {
+               "threads": 32,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 32,
+               "completed": 450808
+            },
+            "optimize": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "fetch_shard_store": {
+               "threads": 1,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 19,
+               "completed": 851
+            },
+            "management": {
+               "threads": 5,
+               "queue": 0,
+               "active": 1,
+               "rejected": 0,
+               "largest": 5,
+               "completed": 6271124
+            },
+            "get": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "merge": {
+               "threads": 2,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 5,
+               "completed": 11947
+            },
+            "bulk": {
+               "threads": 8,
+               "queue": 0,
+               "active": 0,
+               "rejected": 12848,
+               "largest": 8,
+               "completed": 7413824
+            },
+            "snapshot": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            }
+         }
+      },
+      "IWYj8mdrQz2_iemKTVvAHg": {
+         "timestamp": 1448878848349,
+         "attributes": {
+            "max_local_storage_nodes": "20",
+            "data": "false",
+            "master": "false"
+         },
+         "thread_pool": {
+            "percolate": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "fetch_shard_started": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "listener": {
+               "threads": 7,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 7,
+               "completed": 7
+            },
+            "index": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "refresh": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "suggest": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "generic": {
+               "threads": 1,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 139,
+               "completed": 193934
+            },
+            "warmer": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "search": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "flush": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "optimize": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "fetch_shard_store": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "management": {
+               "threads": 2,
+               "queue": 0,
+               "active": 1,
+               "rejected": 0,
+               "largest": 5,
+               "completed": 347397
+            },
+            "get": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "merge": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "bulk": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "snapshot": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            }
+         }
+      },
+      "t_bckNIvSq-oPIIToxPCng": {
+         "timestamp": 1448878848347,
+         "attributes": {
+            "max_local_storage_nodes": "20",
+            "data": "false",
+            "master": "false"
+         },
+         "thread_pool": {
+            "percolate": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "fetch_shard_started": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "listener": {
+               "threads": 10,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 10,
+               "completed": 27
+            },
+            "index": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "refresh": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "suggest": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "generic": {
+               "threads": 1,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 174,
+               "completed": 193994
+            },
+            "warmer": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "search": {
+               "threads": 37,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 37,
+               "completed": 37
+            },
+            "flush": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "optimize": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "fetch_shard_store": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "management": {
+               "threads": 2,
+               "queue": 0,
+               "active": 1,
+               "rejected": 0,
+               "largest": 5,
+               "completed": 348254
+            },
+            "get": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "merge": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "bulk": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "snapshot": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            }
+         }
+      },
+      "P4M1KvtsQHOITjl9n0BlZw": {
+         "timestamp": 1448878848349,
+         "attributes": {
+            "max_local_storage_nodes": "20",
+            "master": "false"
+         },
+         "thread_pool": {
+            "percolate": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "fetch_shard_started": {
+               "threads": 1,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 16,
+               "completed": 144
+            },
+            "listener": {
+               "threads": 2,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 2,
+               "completed": 2
+            },
+            "index": {
+               "threads": 28,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 28,
+               "completed": 28
+            },
+            "refresh": {
+               "threads": 1,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 5,
+               "completed": 22470
+            },
+            "suggest": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "generic": {
+               "threads": 1,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 674,
+               "completed": 254048
+            },
+            "warmer": {
+               "threads": 1,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 3,
+               "completed": 46762
+            },
+            "search": {
+               "threads": 64,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 64,
+               "completed": 19970
+            },
+            "flush": {
+               "threads": 32,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 32,
+               "completed": 459907
+            },
+            "optimize": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            },
+            "fetch_shard_store": {
+               "threads": 1,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 21,
+               "completed": 851
+            },
+            "management": {
+               "threads": 5,
+               "queue": 0,
+               "active": 1,
+               "rejected": 0,
+               "largest": 5,
+               "completed": 6254202
+            },
+            "get": {
+               "threads": 22,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 22,
+               "completed": 22
+            },
+            "merge": {
+               "threads": 1,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 3,
+               "completed": 11970
+            },
+            "bulk": {
+               "threads": 8,
+               "queue": 0,
+               "active": 0,
+               "rejected": 887,
+               "largest": 8,
+               "completed": 7461160
+            },
+            "snapshot": {
+               "threads": 0,
+               "queue": 0,
+               "active": 0,
+               "rejected": 0,
+               "largest": 0,
+               "completed": 0
+            }
+         }
+      }
+   }
+}
