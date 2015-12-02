@@ -1,7 +1,597 @@
 {
-   "cluster_name": "logbook",
+   "cluster_name": "testcluster",
    "nodes": {
-      "VUKy-UP_RHWKY7ttDN3ajA": {
+      "13ZLJNomTHK1w3IdOmy6uw": {
+         "version": "1.7.0",
+         "build": "929b973",
+         "attributes": {
+            "max_local_storage_nodes": "20",
+            "master": "false"
+         },
+         "thread_pool": {
+            "percolate": {
+               "type": "fixed",
+               "min": 32,
+               "max": 32,
+               "queue_size": "1k"
+            },
+            "fetch_shard_started": {
+               "type": "scaling",
+               "min": 1,
+               "max": 64,
+               "keep_alive": "5m",
+               "queue_size": -1
+            },
+            "listener": {
+               "type": "fixed",
+               "min": 10,
+               "max": 10,
+               "queue_size": -1
+            },
+            "index": {
+               "type": "fixed",
+               "min": 256,
+               "max": 256,
+               "queue_size": "3k"
+            },
+            "refresh": {
+               "type": "scaling",
+               "min": 1,
+               "max": 10,
+               "keep_alive": "5m",
+               "queue_size": -1
+            },
+            "suggest": {
+               "type": "fixed",
+               "min": 32,
+               "max": 32,
+               "queue_size": "1k"
+            },
+            "generic": {
+               "type": "cached",
+               "keep_alive": "30s",
+               "queue_size": -1
+            },
+            "warmer": {
+               "type": "scaling",
+               "min": 1,
+               "max": 5,
+               "keep_alive": "5m",
+               "queue_size": -1
+            },
+            "search": {
+               "type": "fixed",
+               "min": 64,
+               "max": 64,
+               "queue_size": "5k"
+            },
+            "flush": {
+               "type": "fixed",
+               "min": 32,
+               "max": 32,
+               "queue_size": "1k"
+            },
+            "optimize": {
+               "type": "fixed",
+               "min": 1,
+               "max": 1,
+               "queue_size": -1
+            },
+            "fetch_shard_store": {
+               "type": "scaling",
+               "min": 1,
+               "max": 64,
+               "keep_alive": "5m",
+               "queue_size": -1
+            },
+            "management": {
+               "type": "scaling",
+               "min": 1,
+               "max": 5,
+               "keep_alive": "5m",
+               "queue_size": -1
+            },
+            "get": {
+               "type": "fixed",
+               "min": 32,
+               "max": 32,
+               "queue_size": "1k"
+            },
+            "merge": {
+               "type": "scaling",
+               "min": 1,
+               "max": 5,
+               "keep_alive": "5m",
+               "queue_size": -1
+            },
+            "bulk": {
+               "type": "fixed",
+               "min": 48,
+               "max": 48,
+               "queue_size": "30"
+            },
+            "snapshot": {
+               "type": "scaling",
+               "min": 1,
+               "max": 5,
+               "keep_alive": "5m",
+               "queue_size": -1
+            }
+         }
+      },
+      "TA-fe_1iT1C-WegSbEOA0A": {
+         "version": "1.7.0",
+         "build": "929b973",
+         "attributes": {
+            "max_local_storage_nodes": "20",
+            "master": "false"
+         },
+         "thread_pool": {
+            "percolate": {
+               "type": "fixed",
+               "min": 32,
+               "max": 32,
+               "queue_size": "1k"
+            },
+            "fetch_shard_started": {
+               "type": "scaling",
+               "min": 1,
+               "max": 64,
+               "keep_alive": "5m",
+               "queue_size": -1
+            },
+            "listener": {
+               "type": "fixed",
+               "min": 10,
+               "max": 10,
+               "queue_size": -1
+            },
+            "index": {
+               "type": "fixed",
+               "min": 256,
+               "max": 256,
+               "queue_size": "3k"
+            },
+            "refresh": {
+               "type": "scaling",
+               "min": 1,
+               "max": 10,
+               "keep_alive": "5m",
+               "queue_size": -1
+            },
+            "suggest": {
+               "type": "fixed",
+               "min": 32,
+               "max": 32,
+               "queue_size": "1k"
+            },
+            "generic": {
+               "type": "cached",
+               "keep_alive": "30s",
+               "queue_size": -1
+            },
+            "warmer": {
+               "type": "scaling",
+               "min": 1,
+               "max": 5,
+               "keep_alive": "5m",
+               "queue_size": -1
+            },
+            "search": {
+               "type": "fixed",
+               "min": 64,
+               "max": 64,
+               "queue_size": "5k"
+            },
+            "flush": {
+               "type": "fixed",
+               "min": 32,
+               "max": 32,
+               "queue_size": "1k"
+            },
+            "optimize": {
+               "type": "fixed",
+               "min": 1,
+               "max": 1,
+               "queue_size": -1
+            },
+            "fetch_shard_store": {
+               "type": "scaling",
+               "min": 1,
+               "max": 64,
+               "keep_alive": "5m",
+               "queue_size": -1
+            },
+            "management": {
+               "type": "scaling",
+               "min": 1,
+               "max": 5,
+               "keep_alive": "5m",
+               "queue_size": -1
+            },
+            "get": {
+               "type": "fixed",
+               "min": 32,
+               "max": 32,
+               "queue_size": "1k"
+            },
+            "merge": {
+               "type": "scaling",
+               "min": 1,
+               "max": 5,
+               "keep_alive": "5m",
+               "queue_size": -1
+            },
+            "bulk": {
+               "type": "fixed",
+               "min": 48,
+               "max": 48,
+               "queue_size": "30"
+            },
+            "snapshot": {
+               "type": "scaling",
+               "min": 1,
+               "max": 5,
+               "keep_alive": "5m",
+               "queue_size": -1
+            }
+         }
+      },
+      "zE7lBHz0Qc6Oh1mWz53Kgg": {
+         "version": "1.7.0",
+         "build": "929b973",
+         "attributes": {
+            "max_local_storage_nodes": "20",
+            "master": "false"
+         },
+         "thread_pool": {
+            "percolate": {
+               "type": "fixed",
+               "min": 32,
+               "max": 32,
+               "queue_size": "1k"
+            },
+            "fetch_shard_started": {
+               "type": "scaling",
+               "min": 1,
+               "max": 64,
+               "keep_alive": "5m",
+               "queue_size": -1
+            },
+            "listener": {
+               "type": "fixed",
+               "min": 10,
+               "max": 10,
+               "queue_size": -1
+            },
+            "index": {
+               "type": "fixed",
+               "min": 256,
+               "max": 256,
+               "queue_size": "3k"
+            },
+            "refresh": {
+               "type": "scaling",
+               "min": 1,
+               "max": 10,
+               "keep_alive": "5m",
+               "queue_size": -1
+            },
+            "suggest": {
+               "type": "fixed",
+               "min": 32,
+               "max": 32,
+               "queue_size": "1k"
+            },
+            "generic": {
+               "type": "cached",
+               "keep_alive": "30s",
+               "queue_size": -1
+            },
+            "warmer": {
+               "type": "scaling",
+               "min": 1,
+               "max": 5,
+               "keep_alive": "5m",
+               "queue_size": -1
+            },
+            "search": {
+               "type": "fixed",
+               "min": 64,
+               "max": 64,
+               "queue_size": "5k"
+            },
+            "flush": {
+               "type": "fixed",
+               "min": 32,
+               "max": 32,
+               "queue_size": "1k"
+            },
+            "optimize": {
+               "type": "fixed",
+               "min": 1,
+               "max": 1,
+               "queue_size": -1
+            },
+            "fetch_shard_store": {
+               "type": "scaling",
+               "min": 1,
+               "max": 64,
+               "keep_alive": "5m",
+               "queue_size": -1
+            },
+            "management": {
+               "type": "scaling",
+               "min": 1,
+               "max": 5,
+               "keep_alive": "5m",
+               "queue_size": -1
+            },
+            "get": {
+               "type": "fixed",
+               "min": 32,
+               "max": 32,
+               "queue_size": "1k"
+            },
+            "merge": {
+               "type": "scaling",
+               "min": 1,
+               "max": 5,
+               "keep_alive": "5m",
+               "queue_size": -1
+            },
+            "bulk": {
+               "type": "fixed",
+               "min": 48,
+               "max": 48,
+               "queue_size": "30"
+            },
+            "snapshot": {
+               "type": "scaling",
+               "min": 1,
+               "max": 5,
+               "keep_alive": "5m",
+               "queue_size": -1
+            }
+         }
+      },
+      "nRDJU5LjRRi3U2TK1ndJ3g": {
+         "version": "1.7.0",
+         "build": "929b973",
+         "attributes": {
+            "max_local_storage_nodes": "20",
+            "master": "false"
+         },
+         "thread_pool": {
+            "percolate": {
+               "type": "fixed",
+               "min": 32,
+               "max": 32,
+               "queue_size": "1k"
+            },
+            "fetch_shard_started": {
+               "type": "scaling",
+               "min": 1,
+               "max": 64,
+               "keep_alive": "5m",
+               "queue_size": -1
+            },
+            "listener": {
+               "type": "fixed",
+               "min": 10,
+               "max": 10,
+               "queue_size": -1
+            },
+            "index": {
+               "type": "fixed",
+               "min": 256,
+               "max": 256,
+               "queue_size": "3k"
+            },
+            "refresh": {
+               "type": "scaling",
+               "min": 1,
+               "max": 10,
+               "keep_alive": "5m",
+               "queue_size": -1
+            },
+            "suggest": {
+               "type": "fixed",
+               "min": 32,
+               "max": 32,
+               "queue_size": "1k"
+            },
+            "generic": {
+               "type": "cached",
+               "keep_alive": "30s",
+               "queue_size": -1
+            },
+            "warmer": {
+               "type": "scaling",
+               "min": 1,
+               "max": 5,
+               "keep_alive": "5m",
+               "queue_size": -1
+            },
+            "search": {
+               "type": "fixed",
+               "min": 64,
+               "max": 64,
+               "queue_size": "5k"
+            },
+            "flush": {
+               "type": "fixed",
+               "min": 32,
+               "max": 32,
+               "queue_size": "1k"
+            },
+            "optimize": {
+               "type": "fixed",
+               "min": 1,
+               "max": 1,
+               "queue_size": -1
+            },
+            "fetch_shard_store": {
+               "type": "scaling",
+               "min": 1,
+               "max": 64,
+               "keep_alive": "5m",
+               "queue_size": -1
+            },
+            "management": {
+               "type": "scaling",
+               "min": 1,
+               "max": 5,
+               "keep_alive": "5m",
+               "queue_size": -1
+            },
+            "get": {
+               "type": "fixed",
+               "min": 32,
+               "max": 32,
+               "queue_size": "1k"
+            },
+            "merge": {
+               "type": "scaling",
+               "min": 1,
+               "max": 5,
+               "keep_alive": "5m",
+               "queue_size": -1
+            },
+            "bulk": {
+               "type": "fixed",
+               "min": 48,
+               "max": 48,
+               "queue_size": "30"
+            },
+            "snapshot": {
+               "type": "scaling",
+               "min": 1,
+               "max": 5,
+               "keep_alive": "5m",
+               "queue_size": -1
+            }
+         }
+      },
+      "d-pwep20Rsy06I66Fgj5_w": {
+         "version": "1.7.0",
+         "build": "929b973",
+         "attributes": {
+            "max_local_storage_nodes": "20",
+            "master": "false"
+         },
+         "thread_pool": {
+            "percolate": {
+               "type": "fixed",
+               "min": 32,
+               "max": 32,
+               "queue_size": "1k"
+            },
+            "fetch_shard_started": {
+               "type": "scaling",
+               "min": 1,
+               "max": 64,
+               "keep_alive": "5m",
+               "queue_size": -1
+            },
+            "listener": {
+               "type": "fixed",
+               "min": 10,
+               "max": 10,
+               "queue_size": -1
+            },
+            "index": {
+               "type": "fixed",
+               "min": 256,
+               "max": 256,
+               "queue_size": "3k"
+            },
+            "refresh": {
+               "type": "scaling",
+               "min": 1,
+               "max": 10,
+               "keep_alive": "5m",
+               "queue_size": -1
+            },
+            "suggest": {
+               "type": "fixed",
+               "min": 32,
+               "max": 32,
+               "queue_size": "1k"
+            },
+            "generic": {
+               "type": "cached",
+               "keep_alive": "30s",
+               "queue_size": -1
+            },
+            "warmer": {
+               "type": "scaling",
+               "min": 1,
+               "max": 5,
+               "keep_alive": "5m",
+               "queue_size": -1
+            },
+            "search": {
+               "type": "fixed",
+               "min": 64,
+               "max": 64,
+               "queue_size": "5k"
+            },
+            "flush": {
+               "type": "fixed",
+               "min": 32,
+               "max": 32,
+               "queue_size": "1k"
+            },
+            "optimize": {
+               "type": "fixed",
+               "min": 1,
+               "max": 1,
+               "queue_size": -1
+            },
+            "fetch_shard_store": {
+               "type": "scaling",
+               "min": 1,
+               "max": 64,
+               "keep_alive": "5m",
+               "queue_size": -1
+            },
+            "management": {
+               "type": "scaling",
+               "min": 1,
+               "max": 5,
+               "keep_alive": "5m",
+               "queue_size": -1
+            },
+            "get": {
+               "type": "fixed",
+               "min": 32,
+               "max": 32,
+               "queue_size": "1k"
+            },
+            "merge": {
+               "type": "scaling",
+               "min": 1,
+               "max": 5,
+               "keep_alive": "5m",
+               "queue_size": -1
+            },
+            "bulk": {
+               "type": "fixed",
+               "min": 48,
+               "max": 48,
+               "queue_size": "30"
+            },
+            "snapshot": {
+               "type": "scaling",
+               "min": 1,
+               "max": 5,
+               "keep_alive": "5m",
+               "queue_size": -1
+            }
+         }
+      },
+      "FW04aIbIRoaeMHebsedHzg": {
          "version": "1.7.0",
          "build": "929b973",
          "attributes": {
@@ -120,7 +710,7 @@
             }
          }
       },
-      "AFkBRgdOSIK4CWUvS_SnYg": {
+      "T2ChzbA2QPCkgOQ3_XlCLw": {
          "version": "1.7.0",
          "build": "929b973",
          "attributes": {
@@ -225,8 +815,8 @@
             },
             "bulk": {
                "type": "fixed",
-               "min": 8,
-               "max": 8,
+               "min": 48,
+               "max": 48,
                "queue_size": "30"
             },
             "snapshot": {
@@ -238,7 +828,7 @@
             }
          }
       },
-      "ppxb2GiCQp-PRkJEtBSPeA": {
+      "FWiVMmXaSY6mLsS4GZv1Jg": {
          "version": "1.7.0",
          "build": "929b973",
          "attributes": {
@@ -343,8 +933,8 @@
             },
             "bulk": {
                "type": "fixed",
-               "min": 8,
-               "max": 8,
+               "min": 48,
+               "max": 48,
                "queue_size": "30"
             },
             "snapshot": {
@@ -356,126 +946,7 @@
             }
          }
       },
-      "OTYlKpYgR7qRxTC5-fNg9w": {
-         "version": "1.7.0",
-         "build": "929b973",
-         "attributes": {
-            "max_local_storage_nodes": "20",
-            "data": "false",
-            "master": "false"
-         },
-         "thread_pool": {
-            "percolate": {
-               "type": "fixed",
-               "min": 32,
-               "max": 32,
-               "queue_size": "1k"
-            },
-            "fetch_shard_started": {
-               "type": "scaling",
-               "min": 1,
-               "max": 64,
-               "keep_alive": "5m",
-               "queue_size": -1
-            },
-            "listener": {
-               "type": "fixed",
-               "min": 10,
-               "max": 10,
-               "queue_size": -1
-            },
-            "index": {
-               "type": "fixed",
-               "min": 256,
-               "max": 256,
-               "queue_size": "5k"
-            },
-            "refresh": {
-               "type": "scaling",
-               "min": 1,
-               "max": 10,
-               "keep_alive": "5m",
-               "queue_size": -1
-            },
-            "suggest": {
-               "type": "fixed",
-               "min": 32,
-               "max": 32,
-               "queue_size": "1k"
-            },
-            "generic": {
-               "type": "cached",
-               "keep_alive": "30s",
-               "queue_size": -1
-            },
-            "warmer": {
-               "type": "scaling",
-               "min": 1,
-               "max": 5,
-               "keep_alive": "5m",
-               "queue_size": -1
-            },
-            "search": {
-               "type": "fixed",
-               "min": 64,
-               "max": 64,
-               "queue_size": "5k"
-            },
-            "flush": {
-               "type": "fixed",
-               "min": 32,
-               "max": 32,
-               "queue_size": "1k"
-            },
-            "optimize": {
-               "type": "fixed",
-               "min": 1,
-               "max": 1,
-               "queue_size": -1
-            },
-            "fetch_shard_store": {
-               "type": "scaling",
-               "min": 1,
-               "max": 64,
-               "keep_alive": "5m",
-               "queue_size": -1
-            },
-            "management": {
-               "type": "scaling",
-               "min": 1,
-               "max": 5,
-               "keep_alive": "5m",
-               "queue_size": -1
-            },
-            "get": {
-               "type": "fixed",
-               "min": 32,
-               "max": 32,
-               "queue_size": "1k"
-            },
-            "merge": {
-               "type": "scaling",
-               "min": 1,
-               "max": 5,
-               "keep_alive": "5m",
-               "queue_size": -1
-            },
-            "bulk": {
-               "type": "fixed",
-               "min": 256,
-               "max": 256,
-               "queue_size": "3k"
-            },
-            "snapshot": {
-               "type": "scaling",
-               "min": 1,
-               "max": 5,
-               "keep_alive": "5m",
-               "queue_size": -1
-            }
-         }
-      },
-      "GQEQ3sRwRT-dRAiiA-7nyw": {
+      "SPL5-LuqQIuplvvz-Cocrg": {
          "version": "1.7.0",
          "build": "929b973",
          "attributes": {
@@ -580,8 +1051,8 @@
             },
             "bulk": {
                "type": "fixed",
-               "min": 8,
-               "max": 8,
+               "min": 48,
+               "max": 48,
                "queue_size": "30"
             },
             "snapshot": {
@@ -593,7 +1064,7 @@
             }
          }
       },
-      "_iy1nhRCRhO6khL2aHqxbg": {
+      "8vJgmAChRwGQcuPTWiWWaw": {
          "version": "1.7.0",
          "build": "929b973",
          "attributes": {
@@ -698,8 +1169,8 @@
             },
             "bulk": {
                "type": "fixed",
-               "min": 8,
-               "max": 8,
+               "min": 48,
+               "max": 48,
                "queue_size": "30"
             },
             "snapshot": {
@@ -711,717 +1182,7 @@
             }
          }
       },
-      "ZX8p7dVKS5yNIcigjZZgbQ": {
-         "version": "1.7.0",
-         "build": "929b973",
-         "attributes": {
-            "max_local_storage_nodes": "20",
-            "data": "false",
-            "master": "false"
-         },
-         "thread_pool": {
-            "percolate": {
-               "type": "fixed",
-               "min": 32,
-               "max": 32,
-               "queue_size": "1k"
-            },
-            "fetch_shard_started": {
-               "type": "scaling",
-               "min": 1,
-               "max": 64,
-               "keep_alive": "5m",
-               "queue_size": -1
-            },
-            "listener": {
-               "type": "fixed",
-               "min": 10,
-               "max": 10,
-               "queue_size": -1
-            },
-            "index": {
-               "type": "fixed",
-               "min": 256,
-               "max": 256,
-               "queue_size": "5k"
-            },
-            "refresh": {
-               "type": "scaling",
-               "min": 1,
-               "max": 10,
-               "keep_alive": "5m",
-               "queue_size": -1
-            },
-            "suggest": {
-               "type": "fixed",
-               "min": 32,
-               "max": 32,
-               "queue_size": "1k"
-            },
-            "generic": {
-               "type": "cached",
-               "keep_alive": "30s",
-               "queue_size": -1
-            },
-            "warmer": {
-               "type": "scaling",
-               "min": 1,
-               "max": 5,
-               "keep_alive": "5m",
-               "queue_size": -1
-            },
-            "search": {
-               "type": "fixed",
-               "min": 64,
-               "max": 64,
-               "queue_size": "5k"
-            },
-            "flush": {
-               "type": "fixed",
-               "min": 32,
-               "max": 32,
-               "queue_size": "1k"
-            },
-            "optimize": {
-               "type": "fixed",
-               "min": 1,
-               "max": 1,
-               "queue_size": -1
-            },
-            "fetch_shard_store": {
-               "type": "scaling",
-               "min": 1,
-               "max": 64,
-               "keep_alive": "5m",
-               "queue_size": -1
-            },
-            "management": {
-               "type": "scaling",
-               "min": 1,
-               "max": 5,
-               "keep_alive": "5m",
-               "queue_size": -1
-            },
-            "get": {
-               "type": "fixed",
-               "min": 32,
-               "max": 32,
-               "queue_size": "1k"
-            },
-            "merge": {
-               "type": "scaling",
-               "min": 1,
-               "max": 5,
-               "keep_alive": "5m",
-               "queue_size": -1
-            },
-            "bulk": {
-               "type": "fixed",
-               "min": 256,
-               "max": 256,
-               "queue_size": "3k"
-            },
-            "snapshot": {
-               "type": "scaling",
-               "min": 1,
-               "max": 5,
-               "keep_alive": "5m",
-               "queue_size": -1
-            }
-         }
-      },
-      "4w8Waj3LQay722nzx7yj9w": {
-         "version": "1.7.0",
-         "build": "929b973",
-         "attributes": {
-            "max_local_storage_nodes": "20",
-            "data": "false",
-            "master": "true"
-         },
-         "thread_pool": {
-            "percolate": {
-               "type": "fixed",
-               "min": 32,
-               "max": 32,
-               "queue_size": "1k"
-            },
-            "fetch_shard_started": {
-               "type": "scaling",
-               "min": 1,
-               "max": 64,
-               "keep_alive": "5m",
-               "queue_size": -1
-            },
-            "listener": {
-               "type": "fixed",
-               "min": 10,
-               "max": 10,
-               "queue_size": -1
-            },
-            "index": {
-               "type": "fixed",
-               "min": 256,
-               "max": 256,
-               "queue_size": "3k"
-            },
-            "refresh": {
-               "type": "scaling",
-               "min": 1,
-               "max": 10,
-               "keep_alive": "5m",
-               "queue_size": -1
-            },
-            "suggest": {
-               "type": "fixed",
-               "min": 32,
-               "max": 32,
-               "queue_size": "1k"
-            },
-            "generic": {
-               "type": "cached",
-               "keep_alive": "30s",
-               "queue_size": -1
-            },
-            "warmer": {
-               "type": "scaling",
-               "min": 1,
-               "max": 5,
-               "keep_alive": "5m",
-               "queue_size": -1
-            },
-            "search": {
-               "type": "fixed",
-               "min": 64,
-               "max": 64,
-               "queue_size": "5k"
-            },
-            "flush": {
-               "type": "fixed",
-               "min": 32,
-               "max": 32,
-               "queue_size": "1k"
-            },
-            "optimize": {
-               "type": "fixed",
-               "min": 1,
-               "max": 1,
-               "queue_size": -1
-            },
-            "fetch_shard_store": {
-               "type": "scaling",
-               "min": 1,
-               "max": 64,
-               "keep_alive": "5m",
-               "queue_size": -1
-            },
-            "management": {
-               "type": "scaling",
-               "min": 1,
-               "max": 5,
-               "keep_alive": "5m",
-               "queue_size": -1
-            },
-            "get": {
-               "type": "fixed",
-               "min": 32,
-               "max": 32,
-               "queue_size": "1k"
-            },
-            "merge": {
-               "type": "scaling",
-               "min": 1,
-               "max": 5,
-               "keep_alive": "5m",
-               "queue_size": -1
-            },
-            "bulk": {
-               "type": "fixed",
-               "min": 256,
-               "max": 256,
-               "queue_size": "3k"
-            },
-            "snapshot": {
-               "type": "scaling",
-               "min": 1,
-               "max": 5,
-               "keep_alive": "5m",
-               "queue_size": -1
-            }
-         }
-      },
-      "0s7lxpqPS2-7TvoTyNKsMQ": {
-         "version": "1.7.0",
-         "build": "929b973",
-         "attributes": {
-            "max_local_storage_nodes": "20",
-            "master": "false"
-         },
-         "thread_pool": {
-            "percolate": {
-               "type": "fixed",
-               "min": 32,
-               "max": 32,
-               "queue_size": "1k"
-            },
-            "fetch_shard_started": {
-               "type": "scaling",
-               "min": 1,
-               "max": 64,
-               "keep_alive": "5m",
-               "queue_size": -1
-            },
-            "listener": {
-               "type": "fixed",
-               "min": 10,
-               "max": 10,
-               "queue_size": -1
-            },
-            "index": {
-               "type": "fixed",
-               "min": 256,
-               "max": 256,
-               "queue_size": "3k"
-            },
-            "refresh": {
-               "type": "scaling",
-               "min": 1,
-               "max": 10,
-               "keep_alive": "5m",
-               "queue_size": -1
-            },
-            "suggest": {
-               "type": "fixed",
-               "min": 32,
-               "max": 32,
-               "queue_size": "1k"
-            },
-            "generic": {
-               "type": "cached",
-               "keep_alive": "30s",
-               "queue_size": -1
-            },
-            "warmer": {
-               "type": "scaling",
-               "min": 1,
-               "max": 5,
-               "keep_alive": "5m",
-               "queue_size": -1
-            },
-            "search": {
-               "type": "fixed",
-               "min": 64,
-               "max": 64,
-               "queue_size": "5k"
-            },
-            "flush": {
-               "type": "fixed",
-               "min": 32,
-               "max": 32,
-               "queue_size": "1k"
-            },
-            "optimize": {
-               "type": "fixed",
-               "min": 1,
-               "max": 1,
-               "queue_size": -1
-            },
-            "fetch_shard_store": {
-               "type": "scaling",
-               "min": 1,
-               "max": 64,
-               "keep_alive": "5m",
-               "queue_size": -1
-            },
-            "management": {
-               "type": "scaling",
-               "min": 1,
-               "max": 5,
-               "keep_alive": "5m",
-               "queue_size": -1
-            },
-            "get": {
-               "type": "fixed",
-               "min": 32,
-               "max": 32,
-               "queue_size": "1k"
-            },
-            "merge": {
-               "type": "scaling",
-               "min": 1,
-               "max": 5,
-               "keep_alive": "5m",
-               "queue_size": -1
-            },
-            "bulk": {
-               "type": "fixed",
-               "min": 8,
-               "max": 8,
-               "queue_size": "30"
-            },
-            "snapshot": {
-               "type": "scaling",
-               "min": 1,
-               "max": 5,
-               "keep_alive": "5m",
-               "queue_size": -1
-            }
-         }
-      },
-      "K_7wYjDvTpe_whPmWSgu1g": {
-         "version": "1.7.0",
-         "build": "929b973",
-         "attributes": {
-            "max_local_storage_nodes": "20",
-            "master": "false"
-         },
-         "thread_pool": {
-            "percolate": {
-               "type": "fixed",
-               "min": 32,
-               "max": 32,
-               "queue_size": "1k"
-            },
-            "fetch_shard_started": {
-               "type": "scaling",
-               "min": 1,
-               "max": 64,
-               "keep_alive": "5m",
-               "queue_size": -1
-            },
-            "listener": {
-               "type": "fixed",
-               "min": 10,
-               "max": 10,
-               "queue_size": -1
-            },
-            "index": {
-               "type": "fixed",
-               "min": 256,
-               "max": 256,
-               "queue_size": "3k"
-            },
-            "refresh": {
-               "type": "scaling",
-               "min": 1,
-               "max": 10,
-               "keep_alive": "5m",
-               "queue_size": -1
-            },
-            "suggest": {
-               "type": "fixed",
-               "min": 32,
-               "max": 32,
-               "queue_size": "1k"
-            },
-            "generic": {
-               "type": "cached",
-               "keep_alive": "30s",
-               "queue_size": -1
-            },
-            "warmer": {
-               "type": "scaling",
-               "min": 1,
-               "max": 5,
-               "keep_alive": "5m",
-               "queue_size": -1
-            },
-            "search": {
-               "type": "fixed",
-               "min": 64,
-               "max": 64,
-               "queue_size": "5k"
-            },
-            "flush": {
-               "type": "fixed",
-               "min": 32,
-               "max": 32,
-               "queue_size": "1k"
-            },
-            "optimize": {
-               "type": "fixed",
-               "min": 1,
-               "max": 1,
-               "queue_size": -1
-            },
-            "fetch_shard_store": {
-               "type": "scaling",
-               "min": 1,
-               "max": 64,
-               "keep_alive": "5m",
-               "queue_size": -1
-            },
-            "management": {
-               "type": "scaling",
-               "min": 1,
-               "max": 5,
-               "keep_alive": "5m",
-               "queue_size": -1
-            },
-            "get": {
-               "type": "fixed",
-               "min": 32,
-               "max": 32,
-               "queue_size": "1k"
-            },
-            "merge": {
-               "type": "scaling",
-               "min": 1,
-               "max": 5,
-               "keep_alive": "5m",
-               "queue_size": -1
-            },
-            "bulk": {
-               "type": "fixed",
-               "min": 8,
-               "max": 8,
-               "queue_size": "30"
-            },
-            "snapshot": {
-               "type": "scaling",
-               "min": 1,
-               "max": 5,
-               "keep_alive": "5m",
-               "queue_size": -1
-            }
-         }
-      },
-      "VtIf1ldyTSGK14IhPasC2g": {
-         "version": "1.7.0",
-         "build": "929b973",
-         "attributes": {
-            "max_local_storage_nodes": "20",
-            "master": "false"
-         },
-         "thread_pool": {
-            "percolate": {
-               "type": "fixed",
-               "min": 32,
-               "max": 32,
-               "queue_size": "1k"
-            },
-            "fetch_shard_started": {
-               "type": "scaling",
-               "min": 1,
-               "max": 64,
-               "keep_alive": "5m",
-               "queue_size": -1
-            },
-            "listener": {
-               "type": "fixed",
-               "min": 10,
-               "max": 10,
-               "queue_size": -1
-            },
-            "index": {
-               "type": "fixed",
-               "min": 256,
-               "max": 256,
-               "queue_size": "3k"
-            },
-            "refresh": {
-               "type": "scaling",
-               "min": 1,
-               "max": 10,
-               "keep_alive": "5m",
-               "queue_size": -1
-            },
-            "suggest": {
-               "type": "fixed",
-               "min": 32,
-               "max": 32,
-               "queue_size": "1k"
-            },
-            "generic": {
-               "type": "cached",
-               "keep_alive": "30s",
-               "queue_size": -1
-            },
-            "warmer": {
-               "type": "scaling",
-               "min": 1,
-               "max": 5,
-               "keep_alive": "5m",
-               "queue_size": -1
-            },
-            "search": {
-               "type": "fixed",
-               "min": 64,
-               "max": 64,
-               "queue_size": "5k"
-            },
-            "flush": {
-               "type": "fixed",
-               "min": 32,
-               "max": 32,
-               "queue_size": "1k"
-            },
-            "optimize": {
-               "type": "fixed",
-               "min": 1,
-               "max": 1,
-               "queue_size": -1
-            },
-            "fetch_shard_store": {
-               "type": "scaling",
-               "min": 1,
-               "max": 64,
-               "keep_alive": "5m",
-               "queue_size": -1
-            },
-            "management": {
-               "type": "scaling",
-               "min": 1,
-               "max": 5,
-               "keep_alive": "5m",
-               "queue_size": -1
-            },
-            "get": {
-               "type": "fixed",
-               "min": 32,
-               "max": 32,
-               "queue_size": "1k"
-            },
-            "merge": {
-               "type": "scaling",
-               "min": 1,
-               "max": 5,
-               "keep_alive": "5m",
-               "queue_size": -1
-            },
-            "bulk": {
-               "type": "fixed",
-               "min": 8,
-               "max": 8,
-               "queue_size": "30"
-            },
-            "snapshot": {
-               "type": "scaling",
-               "min": 1,
-               "max": 5,
-               "keep_alive": "5m",
-               "queue_size": -1
-            }
-         }
-      },
-      "uZpswvo1QfKEK_kpIHslXA": {
-         "version": "1.7.0",
-         "build": "929b973",
-         "attributes": {
-            "max_local_storage_nodes": "20",
-            "master": "false"
-         },
-         "thread_pool": {
-            "percolate": {
-               "type": "fixed",
-               "min": 32,
-               "max": 32,
-               "queue_size": "1k"
-            },
-            "fetch_shard_started": {
-               "type": "scaling",
-               "min": 1,
-               "max": 64,
-               "keep_alive": "5m",
-               "queue_size": -1
-            },
-            "listener": {
-               "type": "fixed",
-               "min": 10,
-               "max": 10,
-               "queue_size": -1
-            },
-            "index": {
-               "type": "fixed",
-               "min": 256,
-               "max": 256,
-               "queue_size": "3k"
-            },
-            "refresh": {
-               "type": "scaling",
-               "min": 1,
-               "max": 10,
-               "keep_alive": "5m",
-               "queue_size": -1
-            },
-            "suggest": {
-               "type": "fixed",
-               "min": 32,
-               "max": 32,
-               "queue_size": "1k"
-            },
-            "generic": {
-               "type": "cached",
-               "keep_alive": "30s",
-               "queue_size": -1
-            },
-            "warmer": {
-               "type": "scaling",
-               "min": 1,
-               "max": 5,
-               "keep_alive": "5m",
-               "queue_size": -1
-            },
-            "search": {
-               "type": "fixed",
-               "min": 64,
-               "max": 64,
-               "queue_size": "5k"
-            },
-            "flush": {
-               "type": "fixed",
-               "min": 32,
-               "max": 32,
-               "queue_size": "1k"
-            },
-            "optimize": {
-               "type": "fixed",
-               "min": 1,
-               "max": 1,
-               "queue_size": -1
-            },
-            "fetch_shard_store": {
-               "type": "scaling",
-               "min": 1,
-               "max": 64,
-               "keep_alive": "5m",
-               "queue_size": -1
-            },
-            "management": {
-               "type": "scaling",
-               "min": 1,
-               "max": 5,
-               "keep_alive": "5m",
-               "queue_size": -1
-            },
-            "get": {
-               "type": "fixed",
-               "min": 32,
-               "max": 32,
-               "queue_size": "1k"
-            },
-            "merge": {
-               "type": "scaling",
-               "min": 1,
-               "max": 5,
-               "keep_alive": "5m",
-               "queue_size": -1
-            },
-            "bulk": {
-               "type": "fixed",
-               "min": 8,
-               "max": 8,
-               "queue_size": "30"
-            },
-            "snapshot": {
-               "type": "scaling",
-               "min": 1,
-               "max": 5,
-               "keep_alive": "5m",
-               "queue_size": -1
-            }
-         }
-      },
-      "Q1cY0Q3kRnWC1T3mTV3fcw": {
+      "h5lnrS03RS-oEks0FXQIng": {
          "version": "1.7.0",
          "build": "929b973",
          "attributes": {
@@ -1540,7 +1301,7 @@
             }
          }
       },
-      "IGqzqKhjT5C4WeW0Rp0v4Q": {
+      "KljdGrSnQwuzohKTnx4hwg": {
          "version": "1.7.0",
          "build": "929b973",
          "attributes": {
@@ -1645,8 +1406,8 @@
             },
             "bulk": {
                "type": "fixed",
-               "min": 8,
-               "max": 8,
+               "min": 48,
+               "max": 48,
                "queue_size": "30"
             },
             "snapshot": {
@@ -1658,250 +1419,13 @@
             }
          }
       },
-      "IWYj8mdrQz2_iemKTVvAHg": {
+      "yvOeC2lxTWO6mgRZNIs70g": {
          "version": "1.7.0",
          "build": "929b973",
          "attributes": {
             "max_local_storage_nodes": "20",
             "data": "false",
-            "master": "false"
-         },
-         "thread_pool": {
-            "percolate": {
-               "type": "fixed",
-               "min": 32,
-               "max": 32,
-               "queue_size": "1k"
-            },
-            "fetch_shard_started": {
-               "type": "scaling",
-               "min": 1,
-               "max": 64,
-               "keep_alive": "5m",
-               "queue_size": -1
-            },
-            "listener": {
-               "type": "fixed",
-               "min": 10,
-               "max": 10,
-               "queue_size": -1
-            },
-            "index": {
-               "type": "fixed",
-               "min": 256,
-               "max": 256,
-               "queue_size": "5k"
-            },
-            "refresh": {
-               "type": "scaling",
-               "min": 1,
-               "max": 10,
-               "keep_alive": "5m",
-               "queue_size": -1
-            },
-            "suggest": {
-               "type": "fixed",
-               "min": 32,
-               "max": 32,
-               "queue_size": "1k"
-            },
-            "generic": {
-               "type": "cached",
-               "keep_alive": "30s",
-               "queue_size": -1
-            },
-            "warmer": {
-               "type": "scaling",
-               "min": 1,
-               "max": 5,
-               "keep_alive": "5m",
-               "queue_size": -1
-            },
-            "search": {
-               "type": "fixed",
-               "min": 64,
-               "max": 64,
-               "queue_size": "5k"
-            },
-            "flush": {
-               "type": "fixed",
-               "min": 32,
-               "max": 32,
-               "queue_size": "1k"
-            },
-            "optimize": {
-               "type": "fixed",
-               "min": 1,
-               "max": 1,
-               "queue_size": -1
-            },
-            "fetch_shard_store": {
-               "type": "scaling",
-               "min": 1,
-               "max": 64,
-               "keep_alive": "5m",
-               "queue_size": -1
-            },
-            "management": {
-               "type": "scaling",
-               "min": 1,
-               "max": 5,
-               "keep_alive": "5m",
-               "queue_size": -1
-            },
-            "get": {
-               "type": "fixed",
-               "min": 32,
-               "max": 32,
-               "queue_size": "1k"
-            },
-            "merge": {
-               "type": "scaling",
-               "min": 1,
-               "max": 5,
-               "keep_alive": "5m",
-               "queue_size": -1
-            },
-            "bulk": {
-               "type": "fixed",
-               "min": 256,
-               "max": 256,
-               "queue_size": "3k"
-            },
-            "snapshot": {
-               "type": "scaling",
-               "min": 1,
-               "max": 5,
-               "keep_alive": "5m",
-               "queue_size": -1
-            }
-         }
-      },
-      "t_bckNIvSq-oPIIToxPCng": {
-         "version": "1.7.0",
-         "build": "929b973",
-         "attributes": {
-            "max_local_storage_nodes": "20",
-            "data": "false",
-            "master": "false"
-         },
-         "thread_pool": {
-            "percolate": {
-               "type": "fixed",
-               "min": 32,
-               "max": 32,
-               "queue_size": "1k"
-            },
-            "fetch_shard_started": {
-               "type": "scaling",
-               "min": 1,
-               "max": 64,
-               "keep_alive": "5m",
-               "queue_size": -1
-            },
-            "listener": {
-               "type": "fixed",
-               "min": 10,
-               "max": 10,
-               "queue_size": -1
-            },
-            "index": {
-               "type": "fixed",
-               "min": 256,
-               "max": 256,
-               "queue_size": "5k"
-            },
-            "refresh": {
-               "type": "scaling",
-               "min": 1,
-               "max": 10,
-               "keep_alive": "5m",
-               "queue_size": -1
-            },
-            "suggest": {
-               "type": "fixed",
-               "min": 32,
-               "max": 32,
-               "queue_size": "1k"
-            },
-            "generic": {
-               "type": "cached",
-               "keep_alive": "30s",
-               "queue_size": -1
-            },
-            "warmer": {
-               "type": "scaling",
-               "min": 1,
-               "max": 5,
-               "keep_alive": "5m",
-               "queue_size": -1
-            },
-            "search": {
-               "type": "fixed",
-               "min": 64,
-               "max": 64,
-               "queue_size": "5k"
-            },
-            "flush": {
-               "type": "fixed",
-               "min": 32,
-               "max": 32,
-               "queue_size": "1k"
-            },
-            "optimize": {
-               "type": "fixed",
-               "min": 1,
-               "max": 1,
-               "queue_size": -1
-            },
-            "fetch_shard_store": {
-               "type": "scaling",
-               "min": 1,
-               "max": 64,
-               "keep_alive": "5m",
-               "queue_size": -1
-            },
-            "management": {
-               "type": "scaling",
-               "min": 1,
-               "max": 5,
-               "keep_alive": "5m",
-               "queue_size": -1
-            },
-            "get": {
-               "type": "fixed",
-               "min": 32,
-               "max": 32,
-               "queue_size": "1k"
-            },
-            "merge": {
-               "type": "scaling",
-               "min": 1,
-               "max": 5,
-               "keep_alive": "5m",
-               "queue_size": -1
-            },
-            "bulk": {
-               "type": "fixed",
-               "min": 256,
-               "max": 256,
-               "queue_size": "3k"
-            },
-            "snapshot": {
-               "type": "scaling",
-               "min": 1,
-               "max": 5,
-               "keep_alive": "5m",
-               "queue_size": -1
-            }
-         }
-      },
-      "P4M1KvtsQHOITjl9n0BlZw": {
-         "version": "1.7.0",
-         "build": "929b973",
-         "attributes": {
-            "max_local_storage_nodes": "20",
-            "master": "false"
+            "master": "true"
          },
          "thread_pool": {
             "percolate": {
